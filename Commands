@@ -1,0 +1,18 @@
+Typical spark-submit command:
+        $ spark-submit --class spark.sql.DriverJDBC --master local[*] SparkCourse.jar
+
+Spark-submit including external libraries:
+        $ spark-submit --class spark.sql.DriverJDBC --master local[*] --jars Downloads/postgresql-42.2.5.jar --driver-class-path Downloads/postgresql-42.2.5.jar SparkCourse.jar
+
+Start Postgres SQL server:
+		$ service postgresql-11 start
+
+Stop Postgres SQL server:
+		$ service postgresql-11 stop
+
+Start thrift server watcher:         
+        $ start-thriftserver.sh --hiveconf hive.server2.thrift.port=12000 --hiveconf hive.server2.thrift.bind.host=0.0.0.0 --master local[*]
+
+Stop thrift server:
+		$ stop-thriftserver.sh
+
